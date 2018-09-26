@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.image.Image?>
+
+
+<ScrollPane fx:controller="Deadwood.dController" prefHeight="990.0" prefWidth="1306.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <content>
+        <AnchorPane id="Board" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="964.0" prefWidth="1284.0">
+
+            <children>
+                <AnchorPane id="TrainStationRoom" prefHeight="484.0" prefWidth="281.0">
+                    <children>
+                        <Button id="DraggedbyTrain" visible="false" layoutX="55.0" layoutY="292.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="54.0" onAction="#handlepartButton" />
+                        <Button id="CrustyProspector" visible="false" layoutX="131.0" layoutY="292.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="54.0" onAction="#handlepartButton" />
+                        <Button id="CyrustheGunfighter" visible="false" layoutX="54.0" layoutY="383.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="54.0" onAction="#handlepartButton" />
+                        <Button id="PreacherwithBag" visible="false" layoutX="131.0" layoutY="383.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="54.0" onAction="#handlepartButton" />
+
+                        <GridPane id="TS_WaitingArea" layoutX="123.0" layoutY="36.0" prefHeight="56.0" prefWidth="108.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Button id="TrainStation_1" visible="false" mnemonicParsing="false"  onAction="#handleWaitButton"/>
+                                <Button id="TrainStation_2" visible="false" mnemonicParsing="false"  GridPane.columnIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="TrainStation_3" visible="false" mnemonicParsing="false"  GridPane.columnIndex="2" onAction="#handleWaitButton"/>
+                                <Button id="TrainStation_4" visible="false" mnemonicParsing="false"  GridPane.columnIndex="3" onAction="#handleWaitButton"/>
+                                <Button id="TrainStation_5" visible="false" mnemonicParsing="false"  GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="TrainStation_6" visible="false" mnemonicParsing="false"  GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="TrainStation_7" visible="false" mnemonicParsing="false"  GridPane.columnIndex="2" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="TrainStation_8" visible="false" mnemonicParsing="false"  GridPane.columnIndex="3" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                            </children>
+                        </GridPane>
+                        <Button id="TrainStation" visible="false" layoutX="19.0" layoutY="230.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="195.0" onAction="#handleRoomButton" />
+                        <StackPane id="TrainStation_StackPane" layoutX="18.0" layoutY="95.0" prefHeight="146.0" prefWidth="234.0">
+                            <children>
+                                <ImageView id="TS_Card" fitHeight="131.0" fitWidth="224.0" pickOnBounds="true" preserveRatio="true" />
+                                <Pane id="Tr_OneRole" prefHeight="146.0" prefWidth="267.0">
+                                    <children>
+                                        <Button id="TrainStation11" visible="false" layoutX="95.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0"  onAction="#handlepartButton"/>
+                                    </children>
+                                </Pane>
+                                <Pane id="Tr_TwoRole" prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <Button id="TrainStation21" visible="false" layoutX="59.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0"  onAction="#handlepartButton"/>
+                                        <Button id="TrainStation22" visible="false" layoutX="125.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0"  onAction="#handlepartButton"/>
+                                    </children>
+                                </Pane>
+                                <Pane id="Tr_ThreeRole" prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <Button id="TrainStation31" visible="false" layoutX="22.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                        <Button id="TrainStation32" visible="false" layoutX="96.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                        <Button id="TrainStation33" visible="false" layoutX="168.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                    </children>
+                                </Pane>
+                            </children>
+                        </StackPane>
+                    </children>
+                </AnchorPane>
+                <AnchorPane id="MainStreetRoom" layoutX="646.0" layoutY="6.0" prefHeight="241.0" prefWidth="629.0">
+                    <children>
+                        <Button id="RailroadWorker" visible="false" layoutX="43.0" layoutY="25.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                        <Button id="FallsoffRoof" visible="false" layoutX="129.0" layoutY="25.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                        <Button id="WomaninBlackDress" visible="false" layoutX="43.0" layoutY="111.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                        <Button id="MayorMcGinty" visible="false" layoutX="129.0" layoutY="111.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                        <GridPane id="MS_WaitingArea" visible="true" layoutX="220.0" layoutY="66.0" prefHeight="56.0" prefWidth="108.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Button id="MainStreet_1" visible="false" mnemonicParsing="false" onAction="#handleWaitButton" />
+                                <Button id="MainStreet_2" visible="false" mnemonicParsing="false"  GridPane.columnIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="MainStreet_3" visible="false" mnemonicParsing="false"  GridPane.columnIndex="2" onAction="#handleWaitButton"/>
+                                <Button id="MainStreet_4" visible="false" mnemonicParsing="false"  GridPane.columnIndex="3" onAction="#handleWaitButton" />
+                                <Button id="MainStreet_5" visible="false" mnemonicParsing="false"  GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="MainStreet_6" visible="false" mnemonicParsing="false"  GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="MainStreet_7" visible="false" mnemonicParsing="false"  GridPane.columnIndex="2" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="MainStreet_8" visible="false" mnemonicParsing="false"  GridPane.columnIndex="3" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                            </children>
+                        </GridPane>
+                        <Button id="MainStreet" visible="false" layoutX="402.0" layoutY="166.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="182.0" onAction="#handleRoomButton" />
+                        <StackPane id="MainStreet_StackPane" layoutX="374.0" layoutY="18.0" prefHeight="146.0" prefWidth="234.0">
+                            <children>
+                                <ImageView id="MS_Card" fitHeight="131.0" fitWidth="224.0" pickOnBounds="true" preserveRatio="true" />
+                                <Pane id="Ma_OneRole" prefHeight="146.0" prefWidth="267.0">
+                                    <children>
+                                        <Button id="MainStreet11" visible="false" layoutX="95.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                    </children>
+                                </Pane>
+                                <Pane id="Ma_TwoRole" prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <Button id="MainStreet21" visible="false" layoutX="59.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                        <Button id="MainStreet22" visible="false" layoutX="125.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                    </children>
+                                </Pane>
+                                <Pane id="Ma_ThreeRole" prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <Button id="MainStreet31" visible="false" layoutX="22.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton"/>
+                                        <Button id="MainStreet32" visible="false" layoutX="96.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                        <Button id="MainStreet33" visible="false" layoutX="168.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                    </children>
+                                </Pane>
+                            </children>
+                        </StackPane>
+                    </children>
+                </AnchorPane>
+                <AnchorPane id="SaloonRoom" layoutX="646.0" layoutY="243.0" prefHeight="241.0" prefWidth="402.0">
+                    <children>
+                        <Button id="WomaninRedDress" visible="false" layoutX="293.0" layoutY="52.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                        <Button id="ReluctantFarmer" visible="false" layoutX="293.0" layoutY="131.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                        <GridPane id="S_WaitingArea" layoutX="167.0" layoutY="25.0" prefHeight="56.0" prefWidth="108.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Button id="Saloon_1" visible="false" mnemonicParsing="false"  onAction="#handleWaitButton"/>
+                                <Button id="Saloon_2" visible="false" mnemonicParsing="false"  GridPane.columnIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="Saloon_3" visible="false" mnemonicParsing="false"  GridPane.columnIndex="2" onAction="#handleWaitButton"/>
+                                <Button id="Saloon_4" visible="false" mnemonicParsing="false"  GridPane.columnIndex="3" onAction="#handleWaitButton"/>
+                                <Button id="Saloon_5" visible="false" mnemonicParsing="false"  GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="Saloon_6" visible="false" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="Saloon_7" visible="false" mnemonicParsing="false"  GridPane.columnIndex="2" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="Saloon_8" visible="false" mnemonicParsing="false"  GridPane.columnIndex="3" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                            </children>
+                        </GridPane>
+                        <Button id="Saloon" visible="false" layoutX="33.0" layoutY="8.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="113.0" onAction="#handleRoomButton" />
+                        <StackPane id="Saloon_StackPane" layoutX="14.0" layoutY="77.0" prefHeight="146.0" prefWidth="234.0">
+                            <children>
+                                <ImageView id="S_Card" fitHeight="131.0" fitWidth="224.0" pickOnBounds="true" preserveRatio="true" />
+                                <Pane id="Sa_OneRole" prefHeight="146.0" prefWidth="267.0">
+                                    <children>
+                                        <Button id="Saloon11" visible="false" layoutX="95.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                    </children>
+                                </Pane>
+                                <Pane id="Sa_TwoRole" prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <Button id="Saloon21" visible="false" layoutX="59.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                        <Button id="Saloon22" visible="false" layoutX="125.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                    </children>
+                                </Pane>
+                                <Pane id="Sa_ThreeRole" prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <Button id="Saloon31" visible="false" layoutX="22.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton"/>
+                                        <Button id="Saloon32" visible="false" layoutX="96.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                        <Button id="Saloon33" visible="false" layoutX="168.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                    </children>
+                                </Pane>
+                            </children>
+                        </StackPane>
+                    </children>
+                </AnchorPane>
+                <AnchorPane id="trailerRoom" layoutX="1061.0" layoutY="264.0" prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <Button id="trailer" visible="false" layoutX="1" layoutY="9" mnemonicParsing="false" prefHeight="33.0" prefWidth="182.0" onAction="#handleRoomButton" />
+                        <Button id="stats" visible="true" text="Player Stats" layoutX="36" layoutY="160" mnemonicParsing="false" prefHeight="25.0" prefWidth="127.0" onAction="#displayPlayerStats" />
+                        <GridPane id="T_WaitingArea" layoutX="45.0" layoutY="93.0" prefHeight="56.0" prefWidth="108.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Button id="trailer_1" visible="false" mnemonicParsing="false" onAction="#handleWaitButton" />
+                                <Button id="trailer_2" visible="false" mnemonicParsing="false"  GridPane.columnIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="trailer_3" visible="false" mnemonicParsing="false"  GridPane.columnIndex="2" onAction="#handleWaitButton"/>
+                                <Button id="trailer_4" visible="false" mnemonicParsing="false"  GridPane.columnIndex="3" onAction="#handleWaitButton"/>
+                                <Button id="trailer_5" visible="false" mnemonicParsing="false"  GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="trailer_6" visible="false" mnemonicParsing="false"  GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="trailer_7" visible="false" mnemonicParsing="false"  GridPane.columnIndex="2" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="trailer_8" visible="false" mnemonicParsing="false"  GridPane.columnIndex="3" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                            </children>
+                        </GridPane>
+                        <Label id="T_DayLabel" layoutX="72.0" layoutY="67.0" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane id="ChurchRoom" layoutX="655.0" layoutY="711.0" prefHeight="244.0" prefWidth="346.0">
+
+                    <children>
+                        <Button id="DeadMan" visible="false" layoutX="261.0" layoutY="72.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                        <Button id="CryingWoman" visible="false" layoutX="263.0" layoutY="155.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton"/>
+                        <GridPane id="C_WaitingArea" layoutX="105.0" layoutY="11.0" prefHeight="56.0" prefWidth="108.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Button id="Church_1" visible="false" mnemonicParsing="false" onAction="#handleWaitButton" />
+                                <Button id="Church_2" visible="false" mnemonicParsing="false"  GridPane.columnIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="Church_3" visible="false" mnemonicParsing="false"  GridPane.columnIndex="2" onAction="#handleWaitButton"/>
+                                <Button id="Church_4" visible="false" mnemonicParsing="false"  GridPane.columnIndex="3" onAction="#handleWaitButton"/>
+                                <Button id="Church_5" visible="false" mnemonicParsing="false"  GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="Church_6" visible="false" mnemonicParsing="false"  GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="Church_7" visible="false" mnemonicParsing="false"  GridPane.columnIndex="2" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="Church_8" visible="false" mnemonicParsing="false"  GridPane.columnIndex="3" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                            </children>
+                        </GridPane>
+                        <Button id="Church" visible="false" layoutX="67.0" layoutY="205.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="114.0" onAction="#handleRoomButton" />
+                        <StackPane id="Church_StackPane" layoutX="7.0" layoutY="65.0" prefHeight="146.0" prefWidth="234.0">
+                            <children>
+                                <ImageView id="C_Card" fitHeight="131.0" fitWidth="224.0" pickOnBounds="true" preserveRatio="true" />
+                                <Pane id="Ch_OneRole" prefHeight="146.0" prefWidth="267.0">
+                                    <children>
+                                        <Button id="Church11" visible="false" layoutX="95.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton"/>
+                                    </children>
+                                </Pane>
+                                <Pane id="Ch_TwoRole" prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <Button id="Church21" visible="false" layoutX="59.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                        <Button id="Church22" visible="false" layoutX="125.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                    </children>
+                                </Pane>
+                                <Pane id="Ch_ThreeRole" prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <Button id="Church31" visible="false" layoutX="22.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                        <Button id="Church32" visible="false" layoutX="96.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                        <Button id="Church33" visible="false" layoutX="168.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                    </children>
+                                </Pane>
+                            </children>
+                        </StackPane>
+                    </children>
+                </AnchorPane>
+                <AnchorPane id="HotelRoom" layoutX="1035.0" layoutY="496.0" prefHeight="465.0" prefWidth="242.0">
+                    <children>
+                        <Button id="FaroPlayer" visible="false" layoutX="65.0" layoutY="14.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                        <Button id="SleepingDrunkard" visible="false" layoutX="145.0" layoutY="14.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                        <Button id="AustralianBartender" visible="false" layoutX="65.0" layoutY="107.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                        <Button id="FallsfromBalcony" visible="false" layoutX="145.0" layoutY="107.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                        <GridPane id="H_WaitingArea"  layoutX="71.0" layoutY="206.0" prefHeight="56.0" prefWidth="108.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Button id="Hotel_1" visible="false" mnemonicParsing="false" onAction="#handleWaitButton" />
+                                <Button id="Hotel_2" visible="false" mnemonicParsing="false"  GridPane.columnIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="Hotel_3" visible="false" mnemonicParsing="false"  GridPane.columnIndex="2" onAction="#handleWaitButton"/>
+                                <Button id="Hotel_4" visible="false" mnemonicParsing="false"  GridPane.columnIndex="3" onAction="#handleWaitButton"/>
+                                <Button id="Hotel_5" visible="false" mnemonicParsing="false"  GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="Hotel_6" visible="false" mnemonicParsing="false"  GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="Hotel_7" visible="false" mnemonicParsing="false"  GridPane.columnIndex="2" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="Hotel_8" visible="false" mnemonicParsing="false"  GridPane.columnIndex="3" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                            </children>
+                        </GridPane>
+                        <Button id="Hotel" visible="false" layoutX="45.0" layoutY="418.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="111.0" onAction="#handleRoomButton" />
+                        <StackPane id="Hotel_StackPane" layoutX="-18.0" layoutY="281.0" prefHeight="146.0" prefWidth="234.0">
+                            <children>
+                                <ImageView id="H_Card" fitHeight="131.0" fitWidth="224.0" pickOnBounds="true" preserveRatio="true" />
+                                <Pane id="Ho_OneRole" prefHeight="146.0" prefWidth="267.0">
+                                    <children>
+                                        <Button id="Hotel11" visible="false" layoutX="95.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                    </children>
+                                </Pane>
+                                <Pane id="Ho_TwoRole" prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <Button id="Hotel21" visible="false" layoutX="59.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                        <Button id="Hotel22" visible="false" layoutX="125.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                    </children>
+                                </Pane>
+                                <Pane id="Ho_ThreeRole" prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <Button id="Hotel31" visible="false" layoutX="22.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                        <Button id="Hotel32" visible="false" layoutX="96.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                        <Button id="Hotel33" visible="false" layoutX="168.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                    </children>
+                                </Pane>
+                            </children>
+                        </StackPane>
+                    </children>
+                </AnchorPane>
+                <AnchorPane id="BankRoom" layoutX="646.0" layoutY="484.0" prefHeight="221.0" prefWidth="412.0">
+                    <children>
+                        <StackPane id="Bank_StackPane" layoutX="15.0" layoutY="22.0" prefHeight="146.0" prefWidth="234.0">
+                            <children>
+                                <ImageView id="B_Card" fitHeight="131.0" fitWidth="224.0" pickOnBounds="true" preserveRatio="true" />
+                                <Pane id="Ba_OneRole" prefHeight="146.0" prefWidth="267.0">
+                                    <children>
+                                        <Button id="Bank11" visible="false" layoutX="95.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0"  onAction="#handlepartButton" />
+                                    </children>
+                                </Pane>
+                                <Pane id="Ba_TwoRole" prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <Button id="Bank21" visible="false" layoutX="59.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0"  onAction="#handlepartButton"/>
+                                        <Button id="Bank22" visible="false" layoutX="125.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0"  onAction="#handlepartButton"/>
+                                    </children>
+                                </Pane>
+                                <Pane id="Ba_ThreeRole" prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <Button id="Bank31" visible="false" layoutX="22.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                        <Button id="Bank32" visible="false" layoutX="96.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                        <Button id="Bank33" visible="false" layoutX="168.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                    </children>
+                                </Pane>
+                            </children>
+                        </StackPane>
+                        <Button id="FlusteredTeller" visible="false" layoutX="262.0" layoutY="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                        <Button id="SuspiciousGentleman" visible="false" layoutX="332.0" layoutY="31.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                        <GridPane id="B_WaitingArea"  layoutX="269.0" layoutY="130.0" prefHeight="56.0" prefWidth="108.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Button id="Bank_1" visible="false" mnemonicParsing="false" onAction="#handleWaitButton" />
+                                <Button id="Bank_2" visible="false" mnemonicParsing="false" GridPane.columnIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="Bank_3" visible="false" mnemonicParsing="false"  GridPane.columnIndex="2" onAction="#handleWaitButton"/>
+                                <Button id="Bank_4" visible="false" mnemonicParsing="false"  GridPane.columnIndex="3" onAction="#handleWaitButton"/>
+                                <Button id="Bank_5" visible="false" mnemonicParsing="false"  GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="Bank_6" visible="false" mnemonicParsing="false"  GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="Bank_7" visible="false" mnemonicParsing="false"  GridPane.columnIndex="2" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="Bank_8" visible="false" mnemonicParsing="false"  GridPane.columnIndex="3" GridPane.rowIndex="1" onAction="#handleWaitButton" />
+                            </children>
+                        </GridPane>
+                        <Button id="Bank" visible="false" layoutX="88.0" layoutY="168.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="91.0" onAction="#handleRoomButton" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane id="SecretHideoutRoom" layoutX="5.0" layoutY="733.0" prefHeight="229.0" prefWidth="627.0">
+                    <children>
+                        <Button id="ClumsyPitFighter" visible="false" layoutX="456.0" layoutY="40.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                        <Button id="ThugwithKnife" visible="false" layoutX="545.0" layoutY="40.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                        <Button id="DangerousTom" visible="false" layoutX="456.0" layoutY="131.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                        <Button id="Penny,whoislost" visible="false" layoutX="546.0" layoutY="131.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                        <GridPane id="SH_WaitingArea"  layoutX="294.0" layoutY="118.0" prefHeight="56.0" prefWidth="108.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Button id="SecretHideout_1" visible="false" mnemonicParsing="false"  onAction="#handleWaitButton"/>
+                                <Button id="SecretHideout_2" visible="false" mnemonicParsing="false"  GridPane.columnIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="SecretHideout_3" visible="false" mnemonicParsing="false"  GridPane.columnIndex="2" onAction="#handleWaitButton"/>
+                                <Button id="SecretHideout_4" visible="false" mnemonicParsing="false"  GridPane.columnIndex="3" onAction="#handleWaitButton" />
+                                <Button id="SecretHideout_5" visible="false" mnemonicParsing="false" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="SecretHideout_6" visible="false" mnemonicParsing="false"  GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="SecretHideout_7" visible="false" mnemonicParsing="false"  GridPane.columnIndex="2" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="SecretHideout_8" visible="false" mnemonicParsing="false"  GridPane.columnIndex="3" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                            </children>
+                        </GridPane>
+                        <Button id="SecretHideout" visible="false" layoutX="32.0" layoutY="178.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="211.0" onAction="#handleRoomButton" />
+                        <StackPane id="SecretHideout_StackPane" layoutX="20.0" layoutY="42.0" prefHeight="146.0" prefWidth="234.0">
+                            <children>
+                                <ImageView id="SH_Card" fitHeight="131.0" fitWidth="224.0" pickOnBounds="true" preserveRatio="true" />
+                                <Pane id="Se_OneRole" prefHeight="146.0" prefWidth="267.0">
+                                    <children>
+                                        <Button id="SecretHideout11" visible="false" layoutX="95.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton"/>
+                                    </children>
+                                </Pane>
+                                <Pane id="Se_TwoRole" prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <Button id="SecretHideout21" visible="false" layoutX="59.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                        <Button id="SecretHideout22" visible="false" layoutX="125.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                    </children>
+                                </Pane>
+                                <Pane id="Se_ThreeRole" prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <Button id="SecretHideout31" visible="false" layoutX="22.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton"/>
+                                        <Button id="SecretHideout32" visible="false" layoutX="96.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                        <Button id="SecretHideout33" visible="false" layoutX="168.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                    </children>
+                                </Pane>
+                            </children>
+                        </StackPane>
+                    </children>
+                </AnchorPane>
+                <AnchorPane id="RanchRoom" layoutX="237.0" layoutY="484.0" prefHeight="271.0" prefWidth="405.0">
+                    <children>
+                        <Button id="ShotinLeg" visible="false" layoutX="153.0" layoutY="173.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                        <Button id="SaucyFred" visible="false" layoutX="220.0" layoutY="173.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                        <Button id="ManUnderHorse" visible="false" layoutX="290.0" layoutY="172.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                        <GridPane id="R_WaitingArea"  layoutX="266.0" layoutY="78.0" prefHeight="56.0" prefWidth="108.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Button id="Ranch_1" visible="false" mnemonicParsing="false" onAction="#handleWaitButton" />
+                                <Button id="Ranch_2" visible="false" mnemonicParsing="false"  GridPane.columnIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="Ranch_3" visible="false" mnemonicParsing="false"  GridPane.columnIndex="2" onAction="#handleWaitButton"/>
+                                <Button id="Ranch_4" visible="false" mnemonicParsing="false"  GridPane.columnIndex="3" onAction="#handleWaitButton"/>
+                                <Button id="Ranch_5" visible="false" mnemonicParsing="false"  GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="Ranch_6" visible="false" mnemonicParsing="false"  GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="Ranch_7" visible="false" mnemonicParsing="false"  GridPane.columnIndex="2" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="Ranch_8" visible="false" mnemonicParsing="false"  GridPane.columnIndex="3" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                            </children>
+                        </GridPane>
+                        <Button id="Ranch" visible="false" layoutX="40.0" layoutY="190.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="100.0" onAction="#handleRoomButton" />
+                        <StackPane id="Ranch_StackPane" layoutX="20.0" layoutY="27.0" prefHeight="146.0" prefWidth="234.0">
+                            <children>
+                                <ImageView id="R_Card" fitHeight="131.0" fitWidth="224.0" pickOnBounds="true" preserveRatio="true" />
+                                <Pane id="Ra_OneRole" prefHeight="146.0" prefWidth="267.0">
+                                    <children>
+                                        <Button id="Ranch11" visible="false" layoutX="95.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                    </children>
+                                </Pane>
+                                <Pane id="Ra_TwoRole" prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <Button id="Ranch21" visible="false" layoutX="59.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                        <Button id="Ranch22" visible="false" layoutX="125.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                    </children>
+                                </Pane>
+                                <Pane id="Ra_ThreeRole" prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <Button id="Ranch31" visible="false" layoutX="22.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                        <Button id="Ranch32" visible="false" layoutX="96.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                        <Button id="Ranch33" visible="false" layoutX="168.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                    </children>
+                                </Pane>
+                            </children>
+                        </StackPane>
+                    </children>
+                </AnchorPane>
+                <AnchorPane id="officeRoom" layoutX="5.0" layoutY="484.0" prefHeight="246.0" prefWidth="242.0">
+                    <children>
+                        <Button id="office" visible="false" layoutX="20.0" layoutY="25.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="211.0" onAction="#handleRoomButton" />
+                        <GridPane id="O_WaitingArea" layoutX="117.0" layoutY="110.0" prefHeight="56.0" prefWidth="108.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Button id="office_1" visible="false" mnemonicParsing="false" onAction="#handleWaitButton" />
+                                <Button id="office_2" visible="false" mnemonicParsing="false"  GridPane.columnIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="office_3" visible="false" mnemonicParsing="false"  GridPane.columnIndex="2" onAction="#handleWaitButton"/>
+                                <Button id="office_4" visible="false" mnemonicParsing="false"  GridPane.columnIndex="3" onAction="#handleWaitButton"/>
+                                <Button id="office_5" visible="false" mnemonicParsing="false"  GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="office_6" visible="false" mnemonicParsing="false"  GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="office_7" visible="false" mnemonicParsing="false"  GridPane.columnIndex="2" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="office_8" visible="false" mnemonicParsing="false"  GridPane.columnIndex="3" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                            </children>
+                        </GridPane>
+                    </children>
+                </AnchorPane>
+                <AnchorPane id="GeneralStoreRoom" layoutX="210.0" layoutY="264.0" prefHeight="221.0" prefWidth="433.0">
+                    <children>
+                        <StackPane id="GeneralStore_StackPane" layoutX="171.0" layoutY="31.0" prefHeight="146.0" prefWidth="234.0">
+                            <children>
+                                <ImageView id="GS_Card" fitHeight="131.0" fitWidth="224.0" pickOnBounds="true" preserveRatio="true" />
+                                <Pane id="Ge_OneRole" prefHeight="146.0" prefWidth="267.0">
+                                    <children>
+                                        <Button id="GeneralStore11" visible="false" layoutX="95.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                    </children>
+                                </Pane>
+                                <Pane id="Ge_TwoRole" prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <Button id="GeneralStore21" visible="false" layoutX="59.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton"/>
+                                        <Button id="GeneralStore22" visible="false" layoutX="125.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                    </children>
+                                </Pane>
+                                <Pane id="Ge_ThreeRole" prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <Button id="GeneralStore31" visible="false" layoutX="22.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                        <Button id="GeneralStore32" visible="false" layoutX="96.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                        <Button id="GeneralStore33" visible="false" layoutX="168.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                    </children>
+                                </Pane>
+                            </children>
+                        </StackPane>
+                        <Button id="ManinOveralls" visible="false" layoutX="44.0" layoutY="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                        <Button id="MisterKeach" visible="false" layoutX="111.0" layoutY="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                        <GridPane id="GS_WaitingArea" layoutX="36.0" layoutY="130.0" prefHeight="56.0" prefWidth="108.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Button id="GeneralStore_1" visible="false" mnemonicParsing="false" onAction="#handleWaitButton" />
+                                <Button id="GeneralStore_2" visible="false" mnemonicParsing="false"  GridPane.columnIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="GeneralStore_3" visible="false" mnemonicParsing="false"  GridPane.columnIndex="2" onAction="#handleWaitButton"/>
+                                <Button id="GeneralStore_4" visible="false" mnemonicParsing="false"  GridPane.columnIndex="3" onAction="#handleWaitButton"/>
+
+
+
+                                <Button id="GeneralStore_5" visible="false" mnemonicParsing="false"  GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+
+                                <Button id="GeneralStore_6" visible="false" mnemonicParsing="false"  GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="GeneralStore_7" visible="false" mnemonicParsing="false"  GridPane.columnIndex="2" GridPane.rowIndex="1" onAction="#handleWaitButton" />
+                                <Button id="GeneralStore_8" visible="false" mnemonicParsing="false"  GridPane.columnIndex="3" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                            </children>
+                        </GridPane>
+                        <Button id="GeneralStore" visible="false" layoutX="190.0" layoutY="161.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="195.0"  onAction="#handleRoomButton" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane id="JailRoom" layoutX="271.0" layoutY="6.0" prefHeight="268.0" prefWidth="370.0">
+                    <children>
+                        <Button id="PrisonerInCell" visible="false" layoutX="277.0" layoutY="26.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                        <Button id="FellerinIrons" visible="false" layoutX="277.0" layoutY="111.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                        <Button id="Jail" visible="false" layoutX="33.0" layoutY="169.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="83.0" onAction="#handleRoomButton" />
+                        <GridPane id="J_WaitingArea" layoutX="141.0" layoutY="179.0" prefHeight="56.0" prefWidth="108.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Button id="Jail_1" visible="false" mnemonicParsing="false" onAction="#handleWaitButton" />
+                                <Button id="Jail_2" visible="false" mnemonicParsing="false"  GridPane.columnIndex="1" onAction="#handleWaitButton" />
+                                <Button id="Jail_3" visible="false" mnemonicParsing="false"  GridPane.columnIndex="2" onAction="#handleWaitButton"/>
+                                <Button id="Jail_4" visible="false" mnemonicParsing="false"  GridPane.columnIndex="3" onAction="#handleWaitButton"/>
+
+
+
+                                <Button id="Jail_5" visible="false" mnemonicParsing="false"  GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+
+                                <Button id="Jail_6" visible="false" mnemonicParsing="false"  GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="Jail_7" visible="false" mnemonicParsing="false"  GridPane.columnIndex="2" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                                <Button id="Jail_8" visible="false" mnemonicParsing="false"  GridPane.columnIndex="3" GridPane.rowIndex="1" onAction="#handleWaitButton"/>
+                            </children>
+                        </GridPane>
+                        <StackPane id="Jail_StackPane" layoutX="19.0" layoutY="22.0" prefHeight="146.0" prefWidth="234.0">
+                            <children>
+                                <ImageView id="J_Card" fitHeight="131.0" fitWidth="224.0" pickOnBounds="true" preserveRatio="true" />
+                                <Pane id="Ja_OneRole" prefHeight="146.0" prefWidth="267.0">
+                                    <children>
+                                        <Button id="Jail11" visible="false" layoutX="95.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                    </children>
+                                </Pane>
+                                <Pane id="Ja_TwoRole" prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <Button id="Jail21" visible="false" layoutX="59.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton"/>
+                                        <Button id="Jail22" visible="false" layoutX="125.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton"/>
+                                    </children>
+                                </Pane>
+                                <Pane id="Ja_ThreeRole" prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <Button id="Jail31" visible="false" layoutX="22.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                        <Button id="Jail32" visible="false" layoutX="96.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton" />
+                                        <Button id="Jail33" visible="false" layoutX="168.0" layoutY="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="45.0" onAction="#handlepartButton"/>
+                                    </children>
+                                </Pane>
+                            </children>
+                        </StackPane>
+                    </children>
+                </AnchorPane>
+            </children>
+            <!-- =======================SHOT COUNTERS============================= -->
+            <ImageView fx:id="TrainStation_C1" layoutX="32" layoutY="87" visible="true" fitHeight="25" fitWidth="25">
+                <image ><Image  url="/Deadwood/shot.png"></Image></image>
+            </ImageView>
+            <ImageView fx:id="TrainStation_C2" layoutX="62" layoutY="87" visible="true" fitHeight="25" fitWidth="25">
+                <image ><Image  url="/Deadwood/shot.png"></Image></image>
+            </ImageView>
+            <ImageView fx:id="TrainStation_C3" layoutX="92" layoutY="87" visible="true" fitHeight="25" fitWidth="25">
+                <image ><Image  url="/Deadwood/shot.png"></Image></image>
+            </ImageView>
+            <ImageView fx:id="Jail_C1" layoutX="310" layoutY="17" visible="true" fitHeight="25" fitWidth="25">
+                <image ><Image  url="/Deadwood/shot.png"></Image></image>
+            </ImageView>
+            <ImageView fx:id="MainStreet_C1" layoutX="1035" layoutY="17" visible="true" fitHeight="25" fitWidth="25">
+                <image ><Image  url="/Deadwood/shot.png"></Image></image>
+            </ImageView>
+            <ImageView fx:id="MainStreet_C2" layoutX="1065" layoutY="17" visible="true" fitHeight="25" fitWidth="25">
+                <image ><Image  url="/Deadwood/shot.png"></Image></image>
+            </ImageView>
+            <ImageView fx:id="MainStreet_C3" layoutX="1095" layoutY="17" visible="true" fitHeight="25" fitWidth="25">
+                <image ><Image  url="/Deadwood/shot.png"></Image></image>
+            </ImageView>
+            <ImageView fx:id="Saloon_C1" layoutX="677" layoutY="314" visible="true" fitHeight="25" fitWidth="25">
+                <image ><Image  url="/Deadwood/shot.png"></Image></image>
+            </ImageView>
+            <ImageView fx:id="Saloon_C2" layoutX="707" layoutY="314" visible="true" fitHeight="25" fitWidth="25">
+                <image ><Image  url="/Deadwood/shot.png"></Image></image>
+            </ImageView>
+            <ImageView fx:id="GeneralStore_C1" layoutX="390" layoutY="282" visible="true" fitHeight="25" fitWidth="25">
+                <image ><Image  url="/Deadwood/shot.png"></Image></image>
+            </ImageView>
+            <ImageView fx:id="GeneralStore_C2" layoutX="420" layoutY="282" visible="true" fitHeight="25" fitWidth="25">
+                <image ><Image  url="/Deadwood/shot.png"></Image></image>
+            </ImageView>
+            <ImageView fx:id="Ranch_C1" layoutX="270" layoutY="502" visible="true" fitHeight="25" fitWidth="25">
+                <image ><Image  url="/Deadwood/shot.png"></Image></image>
+            </ImageView>
+            <ImageView fx:id="Ranch_C2" layoutX="300" layoutY="502" visible="true" fitHeight="25" fitWidth="25">
+                <image ><Image  url="/Deadwood/shot.png"></Image></image>
+            </ImageView>
+            <ImageView fx:id="Bank_C1" layoutX="677" layoutY="500" visible="true" fitHeight="25" fitWidth="25">
+                <image ><Image  url="/Deadwood/shot.png"></Image></image>
+            </ImageView>
+            <ImageView fx:id="Hotel_C1" layoutX="1040" layoutY="767" visible="true" fitHeight="25" fitWidth="25">
+                <image ><Image  url="/Deadwood/shot.png"></Image></image>
+            </ImageView>
+            <ImageView fx:id="Hotel_C2" layoutX="1070" layoutY="767" visible="true" fitHeight="25" fitWidth="25">
+                <image ><Image  url="/Deadwood/shot.png"></Image></image>
+            </ImageView>
+            <ImageView fx:id="Hotel_C3" layoutX="1100" layoutY="767" visible="true" fitHeight="25" fitWidth="25">
+                <image ><Image  url="/Deadwood/shot.png"></Image></image>
+            </ImageView>
+            <ImageView fx:id="Church_C1" layoutX="677" layoutY="767" visible="true" fitHeight="25" fitWidth="25">
+                <image ><Image  url="/Deadwood/shot.png"></Image></image>
+            </ImageView>
+            <ImageView fx:id="Church_C2" layoutX="707" layoutY="767" visible="true" fitHeight="25" fitWidth="25">
+                <image ><Image  url="/Deadwood/shot.png"></Image></image>
+            </ImageView>
+            <ImageView fx:id="SecretHideout_C1" layoutX="35" layoutY="767" visible="true" fitHeight="25" fitWidth="25">
+                <image ><Image  url="/Deadwood/shot.png"></Image></image>
+            </ImageView>
+            <ImageView fx:id="SecretHideout_C2" layoutX="65" layoutY="767" visible="true" fitHeight="25" fitWidth="25">
+                <image ><Image  url="/Deadwood/shot.png"></Image></image>
+            </ImageView>
+            <ImageView fx:id="SecretHideout_C3" layoutX="95" layoutY="767" visible="true" fitHeight="25" fitWidth="25">
+                <image ><Image  url="/Deadwood/shot.png"></Image></image>
+            </ImageView>
+            <!-- =======================PLAYERS============================= -->
+            <ImageView fx:id="player1" layoutX="1108" layoutY="357" visible="false" fitHeight="26" fitWidth="27">
+                <image ><Image  url="/Deadwood/dice/b1.png"></Image></image>
+            </ImageView>
+            <ImageView fx:id="player2" layoutX="1135" layoutY="357" visible="false" fitHeight="26" fitWidth="27">
+                <image><Image url="/Deadwood/dice/r1.png"></Image></image>
+            </ImageView>
+            <ImageView fx:id="player3" layoutX="1161" layoutY="357" visible="false" fitHeight="26" fitWidth="27">
+                <image><Image url="/Deadwood/dice/o1.png"></Image></image>
+            </ImageView>
+            <ImageView fx:id="player4" layoutX="1188" layoutY="357" visible="false" fitHeight="26" fitWidth="27">
+                <image><Image url="/Deadwood/dice/c1.png"></Image></image>
+            </ImageView>
+            <ImageView fx:id="player5" layoutX="1108" layoutY="385" visible="false" fitHeight="26" fitWidth="27">
+                <image><Image url="/Deadwood/dice/p1.png"></Image></image>
+            </ImageView>
+            <ImageView fx:id="player6" layoutX="1135" layoutY="385" visible="false" fitHeight="26" fitWidth="27">
+                <image><Image url="/Deadwood/dice/v1.png"></Image></image>
+            </ImageView>
+            <ImageView fx:id="player7" layoutX="1161" layoutY="385" visible="false" fitHeight="26" fitWidth="27">
+                <image><Image url="/Deadwood/dice/y1.png"></Image></image>
+            </ImageView>
+            <ImageView fx:id="player8" layoutX="1188" layoutY="385" visible="false" fitHeight="26" fitWidth="27">
+                <image><Image url="/Deadwood/dice/g1.png"></Image></image>
+            </ImageView>
+        </AnchorPane>
+    </content>
+</ScrollPane>

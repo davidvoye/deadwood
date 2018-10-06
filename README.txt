@@ -1,4 +1,5 @@
 Instructions to run Deadwood game:
 
-1. From the command line, navigate to deadwood folder.
-2. Run java Deadwood.Deadwood
+1. Compile all java files
+2. In the root directory run java Deadwood.Deadwood
+3. Enjoy the game!

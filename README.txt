@@ -5,5 +5,5 @@ Instructions to run Deadwood game:
 3. Enjoy the game!
 4. After you enter the number of game players (2-8) your available moves are higlighted in Green.
 5. Select the desired Room name and click on the name to enter the room.
-4. For Game rules and Instructions visit linke -> https://cheapass.com//wp-content/uploads/2016/07/Deadwood-Free-Edition-Rules.pdf
+4. For Game rules and Instructions visit link -> https://cheapass.com/deadwood-studios-usa/
 
